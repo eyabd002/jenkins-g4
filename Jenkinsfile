@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Cloner le dépôt') {
             steps {
-                git url: 'https://github.com/eyabd002/projetJenkins.git', branch: 'master'
+                echo '=== Dépôt déjà cloné par Jenkins automatiquement ==='
+                bat 'git status'
             }
         }
 
@@ -46,4 +47,3 @@ pipeline {
         }
     }
 }
-
